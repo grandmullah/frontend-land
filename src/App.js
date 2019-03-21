@@ -1,28 +1,25 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
+import { Drizzle, generateStore } from 'drizzle'
+import { DrizzleContext } from 'drizzle-react'
+// import drizzleOptions from './components/options'
+import land from './contracts/Lands.json'
+import Home from './components/Home'
+import { BrowserRouter } from 'react-router-dom'
+const options = { contracts: [land] }
 
-class App extends Component {
-  render() {
+// import Gov from './components/government'
+const drizzleStore = generateStore(options)
+const drizzle = new Drizzle(options, drizzleStore)
+
+export default class App extends Component {
+  render () {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+      <DrizzleContext.Provider drizzle={drizzle} >
+        <BrowserRouter>
+          <Home />
+        </BrowserRouter>
+      </DrizzleContext.Provider>
+    )
   }
 }
-
-export default App;

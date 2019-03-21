@@ -1,0 +1,25 @@
+
+.button{
+    text-align: center;
+    display:  inline-block;
+    border-radius: px;
+    padding: 0rem 0;
+    margin: 0.5rem 1rem;
+    width: 12rem;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    font-size: 170%;
+}
+.gov{
+    position:absolute;
+    color :white;
+    text-align:left;
+    padding :0.5%;
+}
+.navbar{
+    position: relative;
+    padding-top: 2%;
+    border-bottom: 4px solid white;
+
+}
