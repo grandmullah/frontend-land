@@ -4,9 +4,10 @@ import { Drizzle, generateStore } from 'drizzle'
 import { DrizzleContext } from 'drizzle-react'
 // import drizzleOptions from './components/options'
 import land from './contracts/Lands.json'
+import identity from './contracts/Identity.json'
 import Home from './components/Home'
 import { BrowserRouter } from 'react-router-dom'
-const options = { contracts: [land] }
+const options = { contracts: [land, identity] }
 
 // import Gov from './components/government'
 const drizzleStore = generateStore(options)

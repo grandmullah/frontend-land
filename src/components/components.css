@@ -2,7 +2,7 @@
 .button{
     text-align: center;
     display:  inline-block;
-    border-radius: px;
+    border-radius: 3px;
     padding: 0rem 0;
     margin: 0.5rem 1rem;
     width: 12rem;
@@ -14,7 +14,6 @@
 .gov{
     position:absolute;
     color :white;
-    text-align:left;
     padding :0.5%;
 }
 .navbar{
@@ -22,4 +21,30 @@
     padding-top: 2%;
     border-bottom: 4px solid white;
 
+}
+.formgov {
+    border: 2px solid white;
+}
+.formid {
+    padding:2%;
+    border: 2px solid white;
+    position: relative;
+    color: white;
+    text-align:left;
+    margin-top:2%;
+    border-radius: 5px;
+}
+.form2{
+    padding:2%;
+}
+.cot {
+    padding:2%;
+    border: 2px solid white;
+    position: relative;
+    color: white;
+    text-align:left;
+    margin-top:2%;
+    border-radius: 5px;
+    background-color:white;
+    color:black;
 }
